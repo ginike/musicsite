@@ -1,0 +1,153 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% include "blog/search.html" %}
+{% include "blog/slideshow.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body, html {   
+    background-image: url("media/desktop.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+/* Brightness-zoom Container */
+.img-hover-zoom--brightness img {
+  transition: transform 2s, filter 1.5s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(70%);
+}
+
+/* The Transformation */
+.img-hover-zoom--brightness:hover img {
+  filter: brightness(100%);
+  transform: scale(1.3);
+}
+
+  /* [1] The container */
+.img-hover-zoom {
+  height: 600px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+  <met http-equiv="X-UA-Compatible"
+  content="ie-edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Gh_MusicSheet</title>
+</head>
+
+
+<body>
+  <div class="wrapper">
+
+    <!--Navigation-->
+    
+    <nav class="main-nav">
+      <ul>        
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a> </li>         
+      </ul>
+    </nav>    
+    <!--Top container-->
+    <section class="top-container">
+      <header class="showcase">
+        <img src="img/pic.png"> 
+        <h1>Your web presence</h1>
+        <p>Welcome to Euphony website. Fell free to explore our various services and products. For any information, contact us via obi6065@gmail.com</p>
+        <a href="#" class="btn">Read More</a>
+      </header>
+      <div class="top-box top-box-a">
+        <h4>Pro Membership</h4>
+        <p class="price">$299/mo</p>
+        <a href="" class="btn-">Buy Now</a>
+      </div>
+
+      <div class="top-box top-box-b">
+        <h4>Membership</h4>
+        <p class="price">$199/mo</p>
+        <a href="https://google.com" class="btn">Buy Now</a>
+      </div>
+    </section>
+    <!--Boxes Section-->
+    <section class="boxes">
+      
+
+      <hr>
+      <div class="box">
+        <img class="history" src="media/his.jpg" style="margin-top: 30px"> 
+        <h3>History of Choral Music in Ghana</h3>
+        <p>Welcome to Euphony website. Fell free to explore our various services and products. </p>
+      </div>
+      
+      <hr>
+      <div class="box">
+        <img src="media/logo1.jpg" style="margin-top: 50px"> <img class="history" src="media/logo2.jpg" style="margin-top: 50px"> <img class="history" src="media/logo3.jpg" style="margin-top: 50px"><img class="history" src="media/logo5.jpg" style="margin-top: 50px">
+        
+        <h3>Choirs Directories</h3>
+        <a href="#">Welcome to Euphony website. Fell free to explore our various services and products. </a>
+      </div>
+      <hr>
+      <div class="box">
+        <img src="media/upcome.jpg" style="margin-top: 50px"> 
+
+
+
+        <h3>Upcoming Choral Events</h3>
+        <p>Welcome to Euphony website. Fell free to explore our various services and products. </p>
+      </div>
+
+      <hr>
+      <div class="box">
+        <img src="media/video.jpg" style="margin-top: 50px"> 
+
+        
+        <h3>Choral Videos</h3>
+        <p>Welcome to Euphony website. Fell free to explore our various services and products. </p>
+      </div>      
+    </section>
+    <!--info Section-->
+    <section class="top-container">     
+
+      <hr>
+        <h2>Renowned Ghanaian Composers</h2>
+      </header>      
+    </section>
+      <!--port folio Section-->
+    
+    <div class="img-hover-zoom--brightness">
+      <img src="media/comp1.jpg"> 
+      <img src="media/comp2.jpg"> 
+      <img src="media/comp3.jpg"> 
+      <img src="media/comp4.jpg"> 
+      <img src="media/comp5.jpg"> 
+      <img src="media/comp6.jpg"> 
+      <img src="media/comp7.jpg"> 
+      <img src="media/comp8.jpg">       
+      <img src="media/comp9.jpg">
+    </div>
+    
+    <!--footer-->
+    <footer>
+      <span>Ginike &copy; 2019</span> | <span><a href="#"></a><span>
+    </footer>
+  </div>
+    <!--wrapper end-->
+{% endblock %}
+</body>
+</html>

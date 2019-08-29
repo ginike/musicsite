@@ -1,0 +1,109 @@
+{% extends "blog/base.html"%}
+{% block content %}
+{% include "blog/search.html" %}
+
+
+<style type="text/css">
+  .comment {
+    margin: 20px 5px 20px 20px;
+    font-family: 'roboto';
+    font-size: 20px;
+}
+
+</style>
+<article class="media content-section">
+	<img class ="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+      <small class="text-muted">{{ object.date_posted|date:'F d, Y' }}</small>
+      {%  if object.author == user %}
+      <div>
+			<a class = "btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+	      	<a class = "btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+      </div>
+      {% endif %}
+    </div>
+    <span><h2 class="article-title">{{ object.title }} |{% if object.doc_file %} <a href="{{ object.doc_file.url }}"target="blank">{% endif %}<img src="{{ object.sample_view.url }}"></a></h2></span>
+    <div>
+      <span><p class="article-content">{{ object.composer }}</p><h5>Price : Ghȼ {{ object.new_price }}{% if user.is_authenticated %}{% endif %}</h5>
+      <form>
+        <script type="text/javascript" src="https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+        <button type="button" onClick="payWithRave()">Pay Now</button>
+      </form>
+
+      <script> 
+        const API_publicKey = "FLWPUBK-dc69cb8abe796244370f61d9ff3a8afa-X";
+        function payWithRave() {            
+            var x = getpaidSetup({
+                PBFPubKey: API_publicKey,
+                customer_email: "user@example.com",
+                amount: 20,
+                customer_phone: "0548019130",
+                currency: "GHA",
+                payment_options: "mobilemoneyghana",
+                txref: "rave-123456",
+                meta: [{
+                    metaname: "flightID",
+                    metavalue: "AP1234"
+                }],
+                onclose: function() {},
+                callback: function(response) {
+                    var txref = response.tx.txRef; // collect txRef returned and pass to a          server page to complete status check.
+                    console.log("This is the response returned after a charge", response);
+                    if (
+                        response.tx.chargeResponseCode == "00" ||
+                        response.tx.chargeResponseCode == "0"
+                    ) {
+                        // redirect to a success page
+                    } else {
+                        // redirect to a failure page.
+                    }
+
+                    x.close(); // use this to close the modal immediately after payment.
+                }
+            });
+        }
+      </script>
+    </div>
+  </div>
+  </article>  
+  <a class="btn btn-secondary" style="margin-bottom: 5px" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+  {% for comment in post.comments.all %}  
+    {% if user.is_authenticated or comment.approved_comment %}        
+        <article class="media content-section-four">
+          <img class ="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+          <div class="text-muted">
+            <div class="date">          
+                {%  if object.author == user %}
+                  <p>{{ User.username }}</p>
+                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                  <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+                {% endif %}
+            </div>
+            <hr>
+            <p>{{ comment.author }}</p>          
+            <p>{{ comment.text|linebreaks }}</p>
+          </div>        
+        </article>
+        
+    {% endif %}
+
+{% empty %}
+    <p>No comments here yet :(</p>
+{% endfor %}
+        
+    
+{% endblock content %}
+
+
+
+
+Roboto,RobotoDraft,Helvetica,Arial,sans-seri
+
+
+
+
+        
+
+

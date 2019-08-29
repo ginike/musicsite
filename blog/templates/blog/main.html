@@ -1,0 +1,261 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<style>
+
+  body, html{  
+  background-image: url("media/Bac.jpg");
+  background-repeat: no-repeat;
+  background-size: 1450px;
+  background-position: center;
+  margin-bottom: 0rem;
+}
+/* search box*/
+
+#search-form_3 {
+background: #e1e1e1; /* Fallback color for non-css3 browsers */
+width: 550px;
+margin: 10px auto;
+margin-top: 230px;
+
+
+/* Gradients */
+background: -webkit-gradient( linear,left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
+background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);
+
+/* Rounded Corners */
+border-radius: 17px;
+-webkit-border-radius: 17px;
+-moz-border-radius: 17px;
+
+/* Shadows */
+box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+-moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+}
+
+/*** TEXT BOX ***/
+.search_3{
+background: #fafafa; /* Fallback color for non-css3 browsers */
+
+
+/* Gradients */
+background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(250,250,250)), color-stop(1, rgb(230,230,230)));
+background: -moz-linear-gradient( center top, rgb(250,250,250) 0%, rgb(230,230,230) 100%);
+border: 0;
+border-bottom: 1px solid #fff;
+border-right: 1px solid rgba(255,255,255,.8);
+font-size: 16px;
+margin: 4px;
+padding: 5px;
+width: 250px;
+
+/* Rounded Corners */
+border-radius: 17px;
+-webkit-border-radius: 17px;
+-moz-border-radius: 17px;
+
+/* Shadows */
+box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);
+-webkit-box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);
+-moz-box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);
+}
+
+/*** USER IS FOCUSED ON TEXT BOX ***/
+.search_3:focus{
+outline: none;
+background: #fff; /* Fallback color for non-css3 browsers */
+
+/* Gradients */
+background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(255,255,255)), color-stop(1, rgb(235,235,235)));
+background: -moz-linear-gradient( center top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
+}
+
+/*** SEARCH BUTTON ***/
+.submit_3{
+background: #44921f;/* Fallback color for non-css3 browsers */
+/* Gradients */
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(79,188,32)), color-stop(0.15, rgb(73,157,34)), color-stop(0.88, rgb(62,135,28)), color-stop(1, rgb(49,114,21)));
+background: -moz-linear-gradient( center top, rgb(79,188,32) 0%, rgb(73,157,34) 15%, rgb(62,135,28) 88%, rgb(49,114,21) 100%);
+border: 0;
+color: #eee;
+cursor: pointer;
+float: right;
+font: 16px 'Raleway', sans-serif;
+font-weight: bold;
+height: 30px;
+margin: 4px 4px 0;
+text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+width: 84px;
+outline: none;
+
+/* Rounded Corners */
+border-radius: 30px;
+-webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+
+/* Shadows */
+box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
+-moz-box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.2);
+-webkit-box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
+}
+/*** SEARCH BUTTON HOVER ***/
+.submit_3:hover {
+background: #4ea923; /* Fallback color for non-css3 browsers */
+
+/* Gradients */
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(89,222,27)), color-stop(0.15, rgb(83,179,38)), color-stop(0.8, rgb(66,143,27)), color-stop(1, rgb(54,120,22)));
+background: -moz-linear-gradient( center top, rgb(89,222,27) 0%, rgb(83,179,38) 15%, rgb(66,143,27) 80%, rgb(54,120,22) 100%);
+}
+.submit_3:active {
+background: #4ea923; /* Fallback color for non-css3 browsers */
+
+/* Gradients */
+background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(89,222,27)), color-stop(0.15, rgb(83,179,38)), color-stop(0.8, rgb(66,143,27)), color-stop(1, rgb(54,120,22)));
+background: -moz-linear-gradient( center bottom, rgb(89,222,27) 0%, rgb(83,179,38) 15%, rgb(66,143,27) 80%, rgb(54,120,22) 100%);
+}
+
+
+
+#search-form_30 {
+margin: 10px auto;
+text-align: center;
+
+
+
+}
+#searchbox1{
+margin-top: 50px;
+}
+</style>
+</form>
+    <br/>
+    <form id="search-form_3" class="searchbox1" action="{% url 'search' %}" method="GET" value="{{request.GET.q}}">
+      <input type="text" name="q" value="{{request.GET.q}}"class= "search_3" placeholder="Song title/Composer"/>
+      <input type="submit" class="submit_3" name="submit" value="Search"/>&nbsp;</input>
+    </form>
+
+    <p id="search-form_30" style="color: white">Genres | <a style="color: #039BE5" href="{% url 'anthem' %}">Anthem</a> | <a style="color: #039BE5" href="{% url 'classical' %}">Classical</a> | <a style="color: #039BE5" href="{% url 'highlife' %}">Highlife</a> | <a style="color: #039BE5" href="{% url 'hymn' %}">Hymn</a>|<a style="color: #039BE5" href="{% url 'hymn' %}"> Patriotic </a></p>
+
+    
+
+    {% if submitbutton == 'Search' and request.GET.q != '' %} 
+    {% if results %}
+
+      <h5>Search Results for <b>{{ request.GET.q }}</b></h5>
+    <br/><br/>
+
+    <table class="table">
+      <thread>
+        <tr>
+          <th>Title</th>
+          <th>Composer</th>
+          <th>Purchase</th>
+          <th>Download</th>
+        </tr>
+        <tbody>
+          {% for result in results %}
+            <tr>
+              <td>{{ result.title }}</td>
+              <td>{{ result.composer }}</td>
+              <td><a class="btn btn-success btn-sm" href="{% url 'post-purchase' result.id %}">Buy Now</a></td>
+              <td><h5><a href="{{ result.doc_file.url }}" class="btn btn-info btn-sm">View Sample</a></h5></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </thread>
+    </table>
+    {% else %}
+      No match found
+    {% endif %}
+    {% endif %}
+<head>
+    <link rel="shortcut icon" type="img/png" href="media/pic.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/mcss.css' %}">
+    {% if title %}
+        <title>Gh_MusicSheet - {{ title}}</title>
+    {% else %}
+        <title>Gh_MusicSheet</title>
+    {% endif %}
+
+</head>
+<body>  
+    <header class="site-header">       
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">          
+          <a class="navbar-brand mr-4" href="{% url 'blog-first' %}"><img src="/media/gh_musicsheet_logo.png" alt="logo" width="250" height="75"></a>
+          
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{% url 'blog-home' %}">Get Music</a>
+              <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if user.is_staff %}
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+
+                <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                <a class="nav-item nav-link" href="{% url 'blog-incoming' %}">Requests</a>
+                
+              {% elif user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}                
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>    
+    </div> 
+    <main role="main" class="container">
+      <div class="row">
+
+        <div class="col-md-8">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message}}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% block content %}{% endblock %}
+
+        </div>        
+      </div>            
+    </main>
+    
+</body>
+<div>
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+
+
+</html>
+
+
+
+<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>-->

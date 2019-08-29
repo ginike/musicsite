@@ -1,0 +1,27 @@
+{% extends "blog/base.html"%}
+{%  load crispy_forms_tags %}
+{% block content %}
+<article class="media content-section">
+	<img class= "rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+      <small class="text-muted">{{ object.date_posted|date:'F d, Y' }}</small>     
+    </div>
+    <span><h2 class="article-title">{{ object.title }} |{% if object.doc_file %} <a href="{{ object.doc_file.url }}"class="btn btn-primary btn-sm" target="blank">{% endif %}View Sample</a></h2></span>
+    <div>
+      <span><p class="article-content">{{ object.composer }}</p><h5>Price : Ghȼ {{ object.new_price }}</h5></span>
+    </div>
+  </div>
+</article>
+	<div id="container">
+		<h2 style="color:#228B22">Purchasing Options</h2>
+		<h5>-  Call to Order</h5>
+		<h5>-  Pay via Mobile Money<h6 style="color: #008080;">(Delivery option)</h6> </h5>
+		<h5>-  Pay via Mobile Money<h6 style="color: #008080;">(PDF option)</h6></h5>
+		<h5>* Mobile Money Number: 0548019130</h5>
+		<h5>* Use song title as Mobile Moneny Reference</h5>
+
+	</div>
+
+{% endblock content %}
