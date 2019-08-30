@@ -135,4 +135,16 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS =True
 EMAIL_HOST_USER = 'obi6065@gmail.com'
 EMAIL_HOST_PASSWORD= 'qqgkxhteuzdcprvu'
+
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, '..', 'static')
 #AUTH_USER_MODEL = 'users.CustomUser'
+
