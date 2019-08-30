@@ -26,6 +26,7 @@ SECRET_KEY = 'oa&=b=b6e$3i%z(_t3+dj4#l7+-9er^_ojp1q27@xty=v!_m(m'
 DEBUG = False
 
 ALLOWED_HOSTS = ['ginike.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
