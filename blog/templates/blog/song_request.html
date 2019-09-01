@@ -6,7 +6,7 @@
     {% csrf_token %}
     <div class="form-row">
       <div class="form-group col-md-6 mb-0">
-        {{ form.author|as_crispy_field }}
+        {{ form.your_name|as_crispy_field }}
       </div>
       <div class="form-group col-md-6 mb-0">
         {{ form.song_title|as_crispy_field }}
@@ -19,10 +19,10 @@
         {{ form.song_composer|as_crispy_field }}
       </div>
       <div class="form-group col-md-6 mb-0">
-        {{ form.author_contact|as_crispy_field }}
+        {{ form.your_contact|as_crispy_field }}
       </div>     
     </div>
-    {{ form.author_mail|as_crispy_field }}
+    {{ form.your_email|as_crispy_field }}
      <div>
       	<button type="submit" class="save btn btn-success">Send</button>
       </div>

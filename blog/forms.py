@@ -19,4 +19,4 @@ class CommentForm(forms.ModelForm):
 class RequestingForm(forms.ModelForm):
     class Meta:
         model = Requesting
-        fields = ('author', 'song_title', 'song_composer', 'author_mail', 'author_contact')
+        fields = ('your_name', 'song_title', 'song_composer', 'your_email', 'your_contact')

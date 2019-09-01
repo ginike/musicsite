@@ -215,7 +215,7 @@ def comment_remove(request, pk):
 @method_decorator(staff_member_required, name='dispatch')
 class PostCreateView2(LoginRequiredMixin, CreateView):
 	model = Requesting
-	fields = ['author', 'song_title', 'song_composer', 'author_mail', 'author_contact']
+	fields = ['your_name', 'song_title', 'song_composer', 'your_email', 'your_contact']
 	template_name = 'blog/song_request.html'#override
 	
 

@@ -73,11 +73,11 @@ class Comment(models.Model):
 
 
 class Requesting(models.Model):
-	author = models.CharField(max_length=50)
+	your_name = models.CharField(max_length=50)
 	song_title = models.CharField(max_length=50)
 	song_composer = models.CharField(max_length=50, null=True)
-	author_mail = models.CharField(null=True, max_length=50)
-	author_contact=models.CharField(max_length=15)
+	your_email = models.CharField(null=True, max_length=50)
+	your_contact=models.CharField(max_length=15)
 	date_posted = models.DateTimeField(default=timezone.now)
 	
 
