@@ -82,7 +82,7 @@ class Requesting(models.Model):
 	
 
 	def __str__(self):
-		return self.author
+		return self.your_name
 
 	def get_absolute_url(self):
 			return reverse('blog-home')
