@@ -13,8 +13,6 @@ ul {
   margin: 0;
 }
 
-header { border-bottom: 1px solid #000;
-}
 header > h5{
   display: inline-block;
 }
