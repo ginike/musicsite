@@ -31,8 +31,11 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">          
           <a class="navbar-brand mr-4" href="{% url 'blog-first' %}"><img src="/media/mylogo.png" alt="logo" width="250" height="75"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
           
-          <div class="collapse navbar-expand" id="navbarToggle">          
+          <div class="collapse navbar-expand" id="navbarNavAltMarkup">          
               <div class="navbar-nav">
                 <a class="nav-item nav-link" href="{% url 'blog-home' %}">Get Music</a>
                 <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
@@ -108,6 +111,3 @@
 
 
 
-<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>-->
