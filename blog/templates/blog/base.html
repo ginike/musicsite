@@ -29,9 +29,6 @@
 <body>  
     <header class="site-header">       
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="container">          
           <a class="navbar-brand mr-4" href="{% url 'blog-first' %}"><img src="/media/mylogo.png" alt="logo" width="250" height="75"></a>
 
@@ -59,6 +56,9 @@
                   <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
 
                 {% endif %}
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
               </div>            
           </div>
         </div>
@@ -93,6 +93,7 @@
         </div>
       </div>            
     </main>
+
     
     
 
