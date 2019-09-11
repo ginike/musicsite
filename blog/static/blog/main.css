@@ -1,4 +1,4 @@
-body, html{
+*{
   background-image: none !important;
 }
 
@@ -136,13 +136,11 @@ a.article-title:hover {
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
-  margin-bottom: 20px;
-  margin-top: 7.5rem;
+  margin-bottom: 20px;  
   margin-left: 50px;
 }
 
-@media screen and (min-width:320px) and (max-width:1024px) {
-  /* for screens that are at least 320 pixels wide but less than or equal to 640 pixels wide */
+ that are at least 320 pixels wide but less than or equal to 640 pixels wide */
 }
 
 
