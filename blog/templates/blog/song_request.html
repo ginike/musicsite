@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 {%  load crispy_forms_tags %}
 {% block content %}
+{% include "blog/search.html" %}
 <p>Request Your Files Here</p>
   <form method="post">
     {% csrf_token %}

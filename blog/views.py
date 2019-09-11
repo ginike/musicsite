@@ -95,7 +95,7 @@ def about(request):
 	return render(request, 'blog/about.html', {'title':'About'})
 
 def first_page(request):
-	return render(request, 'blog/first.html')
+	return render(request, 'blog/mybase.html')
 
 
 def search(request):

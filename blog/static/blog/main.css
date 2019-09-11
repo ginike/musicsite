@@ -1,7 +1,7 @@
 body {
   background: #fafafa;
   color: #333333;
-  margin-top: 6.4rem;
+  
 
 }
 
@@ -13,22 +13,6 @@ ul {
   margin: 0;
 }
 
-header > h5{
-  display: inline-block;
-}
-header span{
-  margin-left: 100px
-}
-
-.header img{
-  float: left;
-  width: 100px;
-  height: 100px;
-}
-.bg-steel {
-  background-color: #003b00;
-
-}
 .cont{
   padding-left: 15px;
   background-color: #000000; 
@@ -92,11 +76,13 @@ a.article-title:hover {
   padding-bottom: 1px;
   margin-bottom: 4px;
   border-bottom: 1px solid #e3e3e3
+  
 }
 
 .article-metadata a:hover {
   color: #333;
   text-decoration: none;
+
 }
 
 .article-svg {
