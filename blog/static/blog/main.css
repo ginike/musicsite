@@ -1,3 +1,7 @@
+*{
+  background-image: none !important;
+}
+
 body {
   background: #fafafa;
   color: #333333;
