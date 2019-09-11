@@ -21,21 +21,6 @@ ul {
   padding-left: 15px;
   background-color: #000000; 
 }
-
-.site-header .navbar-nav .nav-link {
-  color: #cbd5db;
-
-}
-
-.site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
-}
-
-.site-header .navbar-nav .nav-link.active {
-  font-weight: 500;
-
-}
-
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
