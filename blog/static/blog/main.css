@@ -129,7 +129,7 @@ a.article-title:hover {
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .article-metadata a:hover {
@@ -157,7 +157,7 @@ a.article-title:hover {
 .wrapper{
     display: grid;
     grid-gap: 20px;
-    padding-right: 15px
+    padding-right: 15px;
 }
 #container{
   min-height: 100%;
