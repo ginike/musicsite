@@ -1,5 +1,6 @@
-{% extends "blog/mybase.html" %}
+{% extends "blog/base.html" %}
 {% block content %}
+{% include "blog/search.html" %}
 
 
 	{% for post in posts %}
@@ -36,4 +37,5 @@
 			<a class="btn btn-outline-info mb-4" href="?page={{page_obj.paginator.num_pages }}">Last</a>
 		{% endif %}        
 	{% endif %}
+
 {% endblock content %}
