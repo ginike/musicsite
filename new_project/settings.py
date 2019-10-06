@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'oa&=b=b6e$3i%z(_t3+dj4#l7+-9er^_ojp1q27@xty=v!_m(m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['ginike.pythonanywhere.com']
 ALLOWED_HOSTS = ['*']
