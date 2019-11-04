@@ -236,3 +236,88 @@ a.article-title:hover {
 .margin-right: 0px;
 
 }
+
+
+
+@media screen and (max-width: 240px){
+	.show-menu-btn, .hide-menu-btn{
+		display: block;
+
+	}
+	.menu{	
+		display: inline-flex;	
+		position: fixed;
+		width: 100%;
+		height: 5vh;
+		background: #003b00;
+		right: -100%;
+		top: 0;
+		text-align: center;
+		padding: 80px 0;
+		line-height: normal;
+		transition: 0.7s;
+		
+	}
+
+	.menu a{
+		display: block;
+		padding: 20px;
+	}
+	.table{
+		width: 80PX;
+
+	}
+
+	.hide-menu-btn{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+	.article-img {
+	  height: 50px;
+	  width: 50px;
+	  margin-right: 8px;
+	
+	}
+	.menu a{
+		margin-bottom: 1px;
+	}
+
+	.article-title {
+	  color: #444444;
+	  font-size: 25%;
+	}
+
+	a.article-title:hover {
+	  color: #002f19;
+	  text-decoration: none;
+	  
+	}
+	.article-content {
+ 	  white-space: pre-line;
+ 	}
+
+	.article-content {
+	  white-space: pre-line;
+	  font-size: 25%;
+	}
+
+	.article-metadata {
+	  width: 40px;
+	  padding-bottom: 1px;
+	  margin-bottom: 4px;
+	  border-bottom: 1px solid #e3e3e3;
+	}
+	.content-section {
+		width: 40px;
+	}
+	
+
+
+#chk:checked ~ .menu{
+	right: 0;
+}
+.body{
+.margin-right: 0px;
+
+}
