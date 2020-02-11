@@ -177,7 +177,7 @@ a.article-title:hover {
 
 	.menu a{
 		display: block !important;
-		padding: 20px !important;
+		
 	}
 	.table{
 		width: 80PX !important;
@@ -263,7 +263,7 @@ a.article-title:hover {
 
 	.menu a{
 		display: block !important;
-		padding: 20px !important;
+		
 	}
 	.table{
 		width: 80PX !important;
@@ -283,6 +283,7 @@ a.article-title:hover {
 	}
 	.menu a{
 		margin-bottom: 1px !important;
+		text-align: left;
 	}
 
 	.article-title {
@@ -293,6 +294,7 @@ a.article-title:hover {
 	a.article-title:hover {
 	  color: #002f19 !important;
 	  text-decoration: none !important;
+
 	  
 	}
 	.article-content {
