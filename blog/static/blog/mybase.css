@@ -233,6 +233,10 @@ a.article-title:hover {
 	
 
 
+#nav {
+    z-index: 9999;
+}
+
 #chk:checked ~ .menu{
 	right: 0 !important;
 }
@@ -318,6 +322,9 @@ a.article-title:hover {
 	}
 	
 
+#nav {
+    z-index: 9999;
+ }
 
 #chk:checked ~ .menu{
 	right: 0 !important;
