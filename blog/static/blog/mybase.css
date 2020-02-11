@@ -5,8 +5,8 @@
 
 }
 .header{
-	height: 100px;
-	background: #003b00;	
+	height: 75px;
+	background-color: #186152;	
 	color: #fff;
 	
 }
@@ -30,6 +30,7 @@
 	text-decoration: none;
 	padding: 0 10px;
 	transition: 0.4s;
+	font-size: 10pt;
 
 }
 .show-menu-btn, .hide-menu-btn{
